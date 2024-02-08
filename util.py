@@ -59,6 +59,11 @@ class UIDataset(data.Dataset):
         image = self.transform(Image.open('{}/{}.png'.format(self.file_path, self.paths[index])))[:-1]
         context, prediction = self.read_gui('{}/{}.gui'.format(self.file_path, self.paths[index]))
         return image, context, prediction
+
+    def __getitem_path__(self, index):
+        image = self.transform(Image.open('{}/{}.png'.format(self.file_path, self.paths[index])))[:-1]
+        context, prediction = self.read_gui('{}/{}.gui'.format(self.file_path, self.paths[index]))
+        return image, context, prediction, self.paths[index]
     
     def read_gui(self, file_path):
         context = []

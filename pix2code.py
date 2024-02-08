@@ -13,8 +13,6 @@ from torch.utils.data import DataLoader
 from model import *
 from torchvision import transforms
 from PIL import Image
-
-
 # In[2]:
 
 
@@ -74,7 +72,14 @@ vocab = Vocabulary('voc.pkl')
 # In[17]:
 
 
-image, *_ = test_data.__getitem__(np.random.randint(len(test_data)))
+image, context, prediction, path = test_data.__getitem_path__(np.random.randint(len(test_data)))
+print(path)
+#image_size = 256
+#transform = transforms.Compose([
+#    transforms.Resize([image_size, image_size]),
+#    transforms.ToTensor(),
+#])
+#image = transform(Image.open('./image.png'))[:-1]
 t = transforms.ToPILImage()
 image = image.unsqueeze(0)
 t(image.squeeze())

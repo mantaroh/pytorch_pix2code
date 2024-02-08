@@ -1,0 +1,20 @@
+{
+  "opening-tag": "{",
+  "closing-tag": "}",
+  "html": "<html>[]</html>",
+  "header": "<header>[]</header>",
+  "body": "<body>[]</body>",
+  "main": "<main>[]</main>",
+  "footer": "<footer>[]</footer>",
+  "nav": "<nav>[]</nav>",
+  "ul": "<ul>[]</ul>",
+  "li": "<li>[]</li>",
+  "text": "<p>[]</p>",
+  "table": "<table>[]</table>",
+  "table-header": "<thead>[]</thead>",
+  "table-body": "<tbody>[]</tbody>",
+  "table-row": "<tr>[]</tr>",
+  "table-header-cell": "<th>[]</th>",
+  "table-cell": "<td>[]</td>",
+  "flex-row": "<div>[]</div>"
+}

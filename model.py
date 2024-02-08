@@ -2,6 +2,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch
 
+# Pix2Code のモデルを定義する
+# Pix2Code の論文通り
 class ImageEncoder(nn.Module):
     
     def __init__(self):
@@ -48,7 +50,8 @@ class ContextEncoder(nn.Module):
 
     def __init__(self):
         super(ContextEncoder, self).__init__()
-        self.rnn = nn.RNN(input_size=19, hidden_size=128, num_layers=2, batch_first=True)
+        #self.rnn = nn.RNN(input_size=19, hidden_size=128, num_layers=2, batch_first=True)
+        self.rnn = nn.LSTM(input_size=19, hidden_size=128, num_layers=2, batch_first=True)
     
     def forward(self, x, h=None):
         # x -> [-1, seq_size, 19], h -> [num_layer=2,-1, 128]
@@ -63,7 +66,8 @@ class Decoder(nn.Module):
 
     def __init__(self):
         super(Decoder, self).__init__()
-        self.rnn = nn.RNN(input_size=1024+128, hidden_size=512, num_layers=2, batch_first=True)
+        #self.rnn = nn.RNN(input_size=1024+128, hidden_size=512, num_layers=2, batch_first=True)
+        self.rnn = nn.LSTM(input_size=1024+128, hidden_size=512, num_layers=2, batch_first=True)
         self.l1 = nn.Linear(512, 19)
     
     def forward(self, image_feature, context_feature, on_cuda = False, h = None):
@@ -83,6 +87,7 @@ class Decoder(nn.Module):
         # x = F.softmax(x, dim=1)
         return x
 
+# Pix2Code 本体
 class Pix2Code(nn.Module):
 
     def __init__(self):

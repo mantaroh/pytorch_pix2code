@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav.header-menu {
+        /* ここに dipslay を修正してメニューを装飾 */
+        background-color: #cbcbcb;
+        top:0;
+        display: flex;
+        grid-template-columns: 1fr 100px 100px;
+        }
+
+        main.container {
+        /* ここに dipslay を修正してメニューを装飾 */
+        display: grid;
+        grid-template-columns: 300px auto;
+        }
+
+        nav.left-menu {
+        width: 300px;
+        background-color: #c0c000;
+        }
+
+        div.content {
+        background-color: #00c0c0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="header-menu">
+        <p>TOP Page</p>
+        <p>会員情報</p>
+        <p>ログイン</p>
+      </nav>
+      
+      <main class="container">
+        <nav class="left-menu">
+          <p>Menu1</p>
+          <p>Menu2</p>
+          <p>Menu3</p>
+        </nav>
+        <div class="content">
+          <h1>トップコンテンツ</h1>
+        </div>
+      </main>
+      
+</body>
+</html>

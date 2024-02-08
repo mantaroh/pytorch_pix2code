@@ -4,3 +4,5 @@ compiler/output.gui
 .vscode/
 *.pyc
 *.weights
+
+html2dsl/node_modules/

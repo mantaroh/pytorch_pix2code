@@ -1,0 +1,15 @@
+{
+  "name": "html2dsl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "html2dsl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mantaroh",
+  "license": "MIT",
+  "dependencies": {
+    "html-dom-parser": "^5.0.7",
+    "puppeteer": "^22.0.0"
+  }
+}
