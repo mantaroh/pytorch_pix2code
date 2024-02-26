@@ -11,7 +11,7 @@
   "li": "<li>[]</li>",
   "text": "<p>[]</p>",
   "table": "<table>[]</table>",
-  "table-header": "<thead>[]</thead>",
+  "table-head": "<thead>[]</thead>",
   "table-body": "<tbody>[]</tbody>",
   "table-row": "<tr>[]</tr>",
   "table-header-cell": "<th>[]</th>",
